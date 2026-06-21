@@ -1,0 +1,872 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cres combines notes, checklists, tasks, habits, mood tracking and vision boards in one calm app. Stop switching between apps — everything you need in one place."
+    />
+    <meta name="theme-color" content="#5BA7F7" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Cres — One Calm Place for Personal Growth" />
+    <meta
+      property="og:description"
+      content="Stop switching between apps. Notes, checklists, tasks, habits, mood tracking and vision boards — together in one calm app."
+    />
+    <meta property="og:image" content="assets/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cres — One Calm Place for Personal Growth" />
+    <meta
+      name="twitter:description"
+      content="Stop switching between apps. Notes, checklists, tasks, habits, mood tracking and vision boards — in one calm app."
+    />
+    <meta name="twitter:image" content="assets/logo.png" />
+    <title>Cres — One Calm Place for Personal Growth</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Golos+Text:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow glow-a" aria-hidden="true"></div>
+    <div class="bg-glow glow-b" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a href="#top" class="logo">
+        <img src="assets/logo.png" alt="" class="logo-mark" width="32" height="32" />
+        Cres
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#features">How it works</a>
+        <a href="#beyond">Why Cres</a>
+        <a href="#audience">For you</a>
+        <a href="#value">Outcomes</a>
+      </nav>
+      <div class="store-links" aria-label="Download links">
+        <a href="#" data-store="appstore" class="button button-ghost store-button">
+          <i class="fa-brands fa-apple" aria-hidden="true"></i>
+          App Store
+        </a>
+      </div>
+      <button
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+        aria-label="Open menu"
+      >
+        <span class="menu-toggle-bar" aria-hidden="true"></span>
+        <span class="menu-toggle-bar" aria-hidden="true"></span>
+        <span class="menu-toggle-bar" aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <div class="mobile-nav-backdrop" aria-hidden="true"></div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="#features">How it works</a>
+      <a href="#beyond">Why Cres</a>
+      <a href="#audience">For you</a>
+      <a href="#value">Outcomes</a>
+      <a href="#cta">Download</a>
+      <div class="mobile-nav-stores">
+        <a href="#" data-store="appstore" class="mobile-store-link">
+          <i class="fa-brands fa-apple" aria-hidden="true"></i>
+          App Store
+        </a>
+      </div>
+    </nav>
+
+    <main id="top">
+      <section class="hero reveal">
+        <div class="hero-content">
+          <p class="eyebrow">Calm personal growth</p>
+          <h1>
+            Stop switching between apps.
+            <span class="hero-line-two">Everything you need. <span class="hero-accent">One calm place.</span></span>
+          </h1>
+          <p class="hero-copy">
+            Notes, checklists, tasks, habits, mood tracking and vision boards —
+            together in one calm workspace. One app instead of six.
+          </p>
+          <div class="hero-actions">
+            <a href="#" data-store="appstore" class="button">
+              <i class="fa-brands fa-apple" aria-hidden="true"></i>
+              App Store
+            </a>
+            <a href="#features" class="button button-ghost">Explore what's inside</a>
+          </div>
+          <p class="hero-platform-line">Available for iPhone</p>
+        </div>
+        <figure class="hero-visual" aria-label="Cres app — Mood, Habits and Tasks">
+          <div class="hero-aura" aria-hidden="true"></div>
+          <div class="hero-chip chip-top" aria-hidden="true">
+            <span class="chip-dot"></span>
+            Mood
+            <strong>Tracked daily</strong>
+          </div>
+          <div class="hero-chip chip-bottom" aria-hidden="true">
+            <span class="chip-dot chip-dot-soft"></span>
+            Tasks
+            <strong>Stay organized</strong>
+          </div>
+          <div class="hero-phones" aria-hidden="true">
+            <div class="phone-mockup phone-mockup-left">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <img
+                  src="assets/app-mood-screen.png"
+                  alt="Cres Mood — calendar and emotional wellbeing"
+                  class="phone-screen-img phone-crop-mood"
+                  width="472"
+                  height="1024"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="phone-mockup phone-mockup-center" role="img" aria-label="Cres Habits — build consistency every day">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <img
+                  src="assets/app-habits-screen.png"
+                  alt="Cres Habits — weekly progress and consistency"
+                  class="phone-screen-img phone-crop-habits"
+                  width="472"
+                  height="1024"
+                  loading="eager"
+                  fetchpriority="high"
+                />
+              </div>
+            </div>
+            <div class="phone-mockup phone-mockup-right">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <img
+                  src="assets/app-tasks-screen.png"
+                  alt="Cres Tasks — daily organization and focus"
+                  class="phone-screen-img phone-crop-tasks"
+                  width="490"
+                  height="1024"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </figure>
+      </section>
+
+      <section id="beyond" class="section reveal">
+        <div class="beyond-layout">
+          <div>
+            <p class="eyebrow">Why Cres</p>
+            <h2>One app instead of six</h2>
+            <p class="audience-lead">
+              Notes, checklists, tasks, habits, mood tracking and vision boards
+              shouldn't live across multiple apps.
+            </p>
+            <p class="audience-lead">
+              Cres brings everything together in one calm workspace designed for
+              personal growth.
+            </p>
+          </div>
+          <div class="beyond-flow-card" aria-label="Essential tools in one workspace">
+            <p class="beyond-flow-label">What lives inside Cres</p>
+            <ol class="beyond-flow-track">
+              <li class="flow-node">
+                <span class="flow-node-icon" aria-hidden="true"><i class="fas fa-note-sticky"></i></span>
+                <span class="flow-node-text">
+                  <span class="flow-node-label">Notes</span>
+                  <span class="flow-node-hint">Capture thoughts</span>
+                </span>
+              </li>
+              <li class="flow-node">
+                <span class="flow-node-icon" aria-hidden="true"><i class="fas fa-list-check"></i></span>
+                <span class="flow-node-text">
+                  <span class="flow-node-label">Checklists</span>
+                  <span class="flow-node-hint">Stay organized</span>
+                </span>
+              </li>
+              <li class="flow-node">
+                <span class="flow-node-icon" aria-hidden="true"><i class="fas fa-circle-check"></i></span>
+                <span class="flow-node-text">
+                  <span class="flow-node-label">Tasks</span>
+                  <span class="flow-node-hint">Focus on today</span>
+                </span>
+              </li>
+              <li class="flow-node">
+                <span class="flow-node-icon" aria-hidden="true"><i class="fas fa-calendar-check"></i></span>
+                <span class="flow-node-text">
+                  <span class="flow-node-label">Habits</span>
+                  <span class="flow-node-hint">Build consistency</span>
+                </span>
+              </li>
+              <li class="flow-node">
+                <span class="flow-node-icon" aria-hidden="true"><i class="fas fa-face-smile"></i></span>
+                <span class="flow-node-text">
+                  <span class="flow-node-label">Mood</span>
+                  <span class="flow-node-hint">Check in daily</span>
+                </span>
+              </li>
+              <li class="flow-node">
+                <span class="flow-node-icon" aria-hidden="true"><i class="fas fa-images"></i></span>
+                <span class="flow-node-text">
+                  <span class="flow-node-label">Vision Board</span>
+                  <span class="flow-node-hint">Keep goals visible</span>
+                </span>
+              </li>
+            </ol>
+            <p class="beyond-flow-caption">Six tools. One workspace.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal principles-grid">
+        <div class="section-heading principles-heading">
+          <h2>Built around how people actually live</h2>
+        </div>
+        <div class="principles-wrapper">
+          <article class="principle-card">
+            <div class="principle-icon">
+              <i class="fas fa-note-sticky"></i>
+            </div>
+            <div class="principle-content">
+              <strong>Notes</strong>
+              <span>Capture ideas before they disappear.</span>
+            </div>
+          </article>
+          <article class="principle-card">
+            <div class="principle-icon">
+              <i class="fas fa-list-check"></i>
+            </div>
+            <div class="principle-content">
+              <strong>Checklists</strong>
+              <span>Organize routines, projects and personal lists.</span>
+            </div>
+          </article>
+          <article class="principle-card">
+            <div class="principle-icon">
+              <i class="fas fa-circle-check"></i>
+            </div>
+            <div class="principle-content">
+              <strong>Tasks</strong>
+              <span>Focus on what matters today.</span>
+            </div>
+          </article>
+          <article class="principle-card">
+            <div class="principle-icon">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="principle-content">
+              <strong>Habits</strong>
+              <span>Build consistency one day at a time.</span>
+            </div>
+          </article>
+          <article class="principle-card">
+            <div class="principle-icon">
+              <i class="fas fa-face-smile"></i>
+            </div>
+            <div class="principle-content">
+              <strong>Mood</strong>
+              <span>Notice how your days actually feel.</span>
+            </div>
+          </article>
+          <article class="principle-card">
+            <div class="principle-icon">
+              <i class="fas fa-images"></i>
+            </div>
+            <div class="principle-content">
+              <strong>Vision Board</strong>
+              <span>Keep your goals and dreams visible.</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="features" class="section reveal">
+        <div class="section-heading features-heading">
+          <p class="eyebrow">How it works</p>
+          <h2 class="features-title">Everything you need. One calm place.</h2>
+          <p class="features-lead">
+            Notes, checklists, tasks, habits, mood tracking and vision boards — together in one simple workspace.
+          </p>
+        </div>
+
+        <div class="story-carousel-wrap">
+          <div
+            class="story-carousel"
+            role="region"
+            aria-label="What you can do with Cres — scroll to explore"
+            tabindex="0"
+          >
+            <article class="story-slide">
+              <div class="story-slide-visual">
+                <div class="features-phone features-phone--story">
+                  <div class="features-phone-bezel">
+                    <div class="features-phone-notch" aria-hidden="true"></div>
+                    <div class="features-phone-screen">
+                      <img
+                        src="assets/app-notes-screen.png"
+                        alt="Cres Notes — folders for thoughts and reflections"
+                        width="472"
+                        height="1024"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="story-slide-copy">
+                <p class="story-slide-label">Notes</p>
+                <h3>Thoughts don't wait.</h3>
+                <p>Capture ideas, reflections and moments before they disappear.</p>
+              </div>
+            </article>
+
+            <article class="story-slide">
+              <div class="story-slide-visual">
+                <div class="features-phone features-phone--story">
+                  <div class="features-phone-bezel">
+                    <div class="features-phone-notch" aria-hidden="true"></div>
+                    <div class="features-phone-screen">
+                      <img
+                        src="assets/app-checklists-screen.png"
+                        alt="Cres Checklists — organized lists for everyday life"
+                        width="472"
+                        height="1024"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="story-slide-copy">
+                <p class="story-slide-label">Checklists</p>
+                <h3>Turn plans into action.</h3>
+                <p>From grocery lists to travel packing, keep everything organized in one place.</p>
+              </div>
+            </article>
+
+            <article class="story-slide">
+              <div class="story-slide-visual">
+                <div class="features-phone features-phone--story">
+                  <div class="features-phone-bezel">
+                    <div class="features-phone-notch" aria-hidden="true"></div>
+                    <div class="features-phone-screen">
+                      <img
+                        src="assets/app-tasks-screen.png"
+                        alt="Cres Tasks — clarity over clutter"
+                        width="490"
+                        height="1024"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="story-slide-copy">
+                <p class="story-slide-label">Tasks</p>
+                <h3>Clarity over clutter.</h3>
+                <p>Focus on what matters today without feeling buried under everything else.</p>
+              </div>
+            </article>
+
+            <article class="story-slide">
+              <div class="story-slide-visual">
+                <div class="features-phone features-phone--story">
+                  <div class="features-phone-bezel">
+                    <div class="features-phone-notch" aria-hidden="true"></div>
+                    <div class="features-phone-screen">
+                      <img
+                        src="assets/app-habits-screen.png"
+                        alt="Cres Habits — weekly rhythm and consistency"
+                        width="472"
+                        height="1024"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="story-slide-copy">
+                <p class="story-slide-label">Habits</p>
+                <h3>See what you return to.</h3>
+                <p>Notice the quiet rhythms of your days without turning life into a scoreboard.</p>
+              </div>
+            </article>
+
+            <article class="story-slide">
+              <div class="story-slide-visual">
+                <div class="features-phone features-phone--story">
+                  <div class="features-phone-bezel">
+                    <div class="features-phone-notch" aria-hidden="true"></div>
+                    <div class="features-phone-screen">
+                      <img
+                        src="assets/app-mood-screen.png"
+                        alt="Cres Mood — emotional calendar and daily check-ins"
+                        class="story-shot-mood"
+                        width="472"
+                        height="1024"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="story-slide-copy">
+                <p class="story-slide-label">Mood</p>
+                <h3>Feelings have a shape.</h3>
+                <p>Understand how your days actually feel, not just how busy they were.</p>
+              </div>
+            </article>
+
+            <article class="story-slide">
+              <div class="story-slide-visual">
+                <div class="features-phone features-phone--story">
+                  <div class="features-phone-bezel">
+                    <div class="features-phone-notch" aria-hidden="true"></div>
+                    <div class="features-phone-screen">
+                      <img
+                        src="assets/app-vision-board-screen.png"
+                        alt="Cres Vision Board — goals and inspirations"
+                        width="472"
+                        height="1024"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="story-slide-copy">
+                <p class="story-slide-label">Vision Board</p>
+                <h3>Keep your future visible.</h3>
+                <p>Collect goals, inspiration, places, experiences and dreams in one visual space you'll actually revisit.</p>
+              </div>
+            </article>
+
+            <article class="story-slide">
+              <div class="story-slide-visual">
+                <div class="features-phone features-phone--story">
+                  <div class="features-phone-bezel">
+                    <div class="features-phone-notch" aria-hidden="true"></div>
+                    <div class="features-phone-screen">
+                      <img
+                        src="assets/app-habit-analytics-screen.png"
+                        alt="Cres Habit Analytics — streaks, heatmaps and progress"
+                        width="472"
+                        height="1024"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="story-slide-copy">
+                <p class="story-slide-label">Habit Analytics</p>
+                <h3>See your consistency.</h3>
+                <p>Review streaks, heatmaps and progress for each habit — clearly and at your own pace.</p>
+              </div>
+            </article>
+
+            <article class="story-slide">
+              <div class="story-slide-visual">
+                <div class="features-phone features-phone--story">
+                  <div class="features-phone-bezel">
+                    <div class="features-phone-notch" aria-hidden="true"></div>
+                    <div class="features-phone-screen">
+                      <img
+                        src="assets/app-mood-analytics-screen.png"
+                        alt="Cres Mood Analytics — mood counter and mood over time"
+                        width="472"
+                        height="1024"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="story-slide-copy">
+                <p class="story-slide-label">Mood Analytics</p>
+                <h3>Your mood over time.</h3>
+                <p>Browse summaries, counters and trends from the moods you've logged — week by week.</p>
+              </div>
+            </article>
+
+            <article class="story-slide">
+              <div class="story-slide-visual">
+                <div class="features-phone features-phone--story">
+                  <div class="features-phone-bezel">
+                    <div class="features-phone-notch" aria-hidden="true"></div>
+                    <div class="features-phone-screen">
+                      <img
+                        src="assets/app-privacy-screen.png"
+                        alt="Cres Privacy — App Locked with biometrics and PIN"
+                        class="story-shot-privacy"
+                        width="472"
+                        height="1024"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="story-slide-copy">
+                <p class="story-slide-label">Privacy</p>
+                <h3>Your space stays yours.</h3>
+                <p>Protect personal thoughts with PIN lock and biometric authentication.</p>
+              </div>
+            </article>
+
+            <article class="story-slide story-slide--connected">
+              <div class="story-slide-visual">
+                <div class="story-connected-visual" aria-hidden="true">
+                  <div class="story-connected-phones">
+                    <div class="story-connected-phone">
+                      <div class="story-connected-bezel">
+                        <div class="story-connected-notch" aria-hidden="true"></div>
+                        <div class="story-connected-screen">
+                          <img src="assets/app-notes-screen.png" alt="" width="472" height="1024" loading="lazy" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="story-connected-phone">
+                      <div class="story-connected-bezel">
+                        <div class="story-connected-notch" aria-hidden="true"></div>
+                        <div class="story-connected-screen">
+                          <img src="assets/app-checklists-screen.png" alt="" width="472" height="1024" loading="lazy" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="story-connected-phone">
+                      <div class="story-connected-bezel">
+                        <div class="story-connected-notch" aria-hidden="true"></div>
+                        <div class="story-connected-screen">
+                          <img src="assets/app-tasks-screen.png" alt="" width="490" height="1024" loading="lazy" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="story-connected-phone">
+                      <div class="story-connected-bezel">
+                        <div class="story-connected-notch" aria-hidden="true"></div>
+                        <div class="story-connected-screen">
+                          <img src="assets/app-habits-screen.png" alt="" width="472" height="1024" loading="lazy" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="story-connected-phone">
+                      <div class="story-connected-bezel">
+                        <div class="story-connected-notch" aria-hidden="true"></div>
+                        <div class="story-connected-screen">
+                          <img src="assets/app-mood-screen.png" alt="" width="472" height="1024" loading="lazy" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="story-connected-phone">
+                      <div class="story-connected-bezel">
+                        <div class="story-connected-notch" aria-hidden="true"></div>
+                        <div class="story-connected-screen">
+                          <img src="assets/app-vision-board-screen.png" alt="" width="472" height="1024" loading="lazy" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="story-slide-copy">
+                <p class="story-slide-label">All in one place</p>
+                <h3>Everything you need. One calm app.</h3>
+                <p>Notes, checklists, tasks, habits, mood tracking and vision boards — together in one place, so you can stop switching between multiple apps.</p>
+              </div>
+            </article>
+          </div>
+          <div class="story-carousel-fade story-carousel-fade--left" aria-hidden="true"></div>
+          <div class="story-carousel-fade story-carousel-fade--right" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section id="audience" class="section reveal audience-section">
+        <div class="audience-intro">
+          <p class="eyebrow">For you</p>
+          <h2>One place for the parts of life you want to keep.</h2>
+          <p class="audience-lead">
+            Capture thoughts. Plan your days. Build habits. Track your mood. Keep your vision board close.
+          </p>
+          <p class="audience-lead">
+            Without switching between apps.
+          </p>
+        </div>
+        <div class="audience-cards-wrap">
+          <div class="audience-cards" aria-label="Everyday situations Cres supports">
+            <article class="audience-card tone-a">
+              Notes<br />
+              Ideas shouldn't disappear before you have time to act on them.
+            </article>
+            <article class="audience-card tone-b">
+              Tasks<br />
+              Know what matters today without feeling overwhelmed by everything else.
+            </article>
+            <article class="audience-card tone-c">
+              Habits<br />
+              Build consistency gently, one day at a time.
+            </article>
+            <article class="audience-card tone-d">
+              Mood<br />
+              See how your days actually feel, not just how busy they were.
+            </article>
+            <article class="audience-card tone-e">
+              Vision Board<br />
+              Keep your goals and dreams visible so they stay part of your everyday life.
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="value" class="section reveal">
+        <div class="section-heading value-heading">
+          <p class="eyebrow">Outcomes</p>
+          <h2>What a calmer workspace feels like</h2>
+        </div>
+        <div class="value-grid">
+          <article class="value-item value-item--clarity">
+            <div class="value-icon" aria-hidden="true">
+              <i class="fas fa-circle-check"></i>
+            </div>
+            <p class="value-label">Clarity</p>
+            <h3 class="value-headline">Focus on what matters.</h3>
+            <p class="value-desc">
+              Tasks help you see what deserves your attention today — without the noise of everything else.
+            </p>
+          </article>
+          <article class="value-item value-item--reflection">
+            <div class="value-icon" aria-hidden="true">
+              <i class="fas fa-note-sticky"></i>
+            </div>
+            <p class="value-label">Reflection</p>
+            <h3 class="value-headline">Keep your thoughts close.</h3>
+            <p class="value-desc">
+              Capture ideas, notes and moments before they disappear.
+            </p>
+          </article>
+          <article class="value-item value-item--awareness">
+            <div class="value-icon" aria-hidden="true">
+              <i class="fas fa-face-smile"></i>
+            </div>
+            <p class="value-label">Self-awareness</p>
+            <h3 class="value-headline">Notice how your days feel.</h3>
+            <p class="value-desc">
+              Mood tracking helps you understand your experience instead of relying on memory.
+            </p>
+          </article>
+          <article class="value-item value-item--consistency">
+            <div class="value-icon" aria-hidden="true">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <p class="value-label">Consistency</p>
+            <h3 class="value-headline">Build routines that last.</h3>
+            <p class="value-desc">
+              Create habits at your own pace — without streak pressure or guilt.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <blockquote class="pull-quote reveal">
+        <p>One calm workspace for personal growth — not six scattered apps.</p>
+      </blockquote>
+
+      <section id="cta" class="cta reveal">
+        <div class="cta-layout">
+          <div class="cta-content">
+            <p class="eyebrow">When you're ready</p>
+            <h2>Everything you need. One calm place.</h2>
+            <p>
+              Notes, checklists, tasks, habits, mood tracking and vision boards — together in one app designed for personal growth.
+            </p>
+            <div class="cta-actions">
+              <a href="#" data-store="appstore" class="button">
+                <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                App Store
+              </a>
+            </div>
+          </div>
+          <figure class="cta-visual" aria-hidden="true">
+            <svg class="cta-orbit-art" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" fill="none" aria-hidden="true">
+              <defs>
+                <radialGradient id="cta-glow" cx="50%" cy="48%" r="54%">
+                  <stop offset="0%" stop-color="#93C5FD" stop-opacity="0.45" />
+                  <stop offset="55%" stop-color="#DDEFFF" stop-opacity="0.18" />
+                  <stop offset="100%" stop-color="#FAFCFF" stop-opacity="0" />
+                </radialGradient>
+                <radialGradient id="cta-hub-fill" cx="50%" cy="44%" r="70%">
+                  <stop offset="0%" stop-color="#FFFFFF" />
+                  <stop offset="100%" stop-color="#EDF6FF" />
+                </radialGradient>
+                <linearGradient id="cta-hub-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#C8E4FC" />
+                  <stop offset="100%" stop-color="#93C5FD" stop-opacity="0.5" />
+                </linearGradient>
+                <linearGradient id="line-a" gradientUnits="userSpaceOnUse" x1="180" y1="52" x2="180" y2="147">
+                  <stop offset="0%" stop-color="#5BA7F7" stop-opacity="0.12" />
+                  <stop offset="100%" stop-color="#5BA7F7" stop-opacity="0.3" />
+                </linearGradient>
+                <linearGradient id="line-b" gradientUnits="userSpaceOnUse" x1="262" y1="112" x2="200.2" y2="157.2">
+                  <stop offset="0%" stop-color="#5BA7F7" stop-opacity="0.12" />
+                  <stop offset="100%" stop-color="#5BA7F7" stop-opacity="0.3" />
+                </linearGradient>
+                <linearGradient id="line-c" gradientUnits="userSpaceOnUse" x1="262" y1="244" x2="198.7" y2="188.4">
+                  <stop offset="0%" stop-color="#5BA7F7" stop-opacity="0.12" />
+                  <stop offset="100%" stop-color="#5BA7F7" stop-opacity="0.3" />
+                </linearGradient>
+                <linearGradient id="line-d" gradientUnits="userSpaceOnUse" x1="180" y1="284" x2="180" y2="197">
+                  <stop offset="0%" stop-color="#5BA7F7" stop-opacity="0.12" />
+                  <stop offset="100%" stop-color="#5BA7F7" stop-opacity="0.3" />
+                </linearGradient>
+                <linearGradient id="line-e" gradientUnits="userSpaceOnUse" x1="98" y1="244" x2="161.3" y2="188.4">
+                  <stop offset="0%" stop-color="#5BA7F7" stop-opacity="0.12" />
+                  <stop offset="100%" stop-color="#5BA7F7" stop-opacity="0.3" />
+                </linearGradient>
+                <linearGradient id="line-f" gradientUnits="userSpaceOnUse" x1="98" y1="112" x2="159.8" y2="157.2">
+                  <stop offset="0%" stop-color="#5BA7F7" stop-opacity="0.12" />
+                  <stop offset="100%" stop-color="#5BA7F7" stop-opacity="0.3" />
+                </linearGradient>
+                <clipPath id="cta-logo-clip">
+                  <circle cx="180" cy="172" r="20" />
+                </clipPath>
+              </defs>
+              <circle cx="180" cy="172" r="136" fill="url(#cta-glow)" />
+              <g stroke-linecap="round" fill="none">
+                <path d="M180 52 Q180 99.5 180 147" stroke="url(#line-a)" stroke-width="1" />
+                <path d="M262 112 Q231 134.6 200.2 157.2" stroke="url(#line-b)" stroke-width="1" />
+                <path d="M262 244 Q230.4 216.2 198.7 188.4" stroke="url(#line-c)" stroke-width="1" />
+                <path d="M180 284 Q180 240.5 180 197" stroke="url(#line-d)" stroke-width="1" />
+                <path d="M98 244 Q129.6 216.2 161.3 188.4" stroke="url(#line-e)" stroke-width="1" />
+                <path d="M98 112 Q128.9 134.6 159.8 157.2" stroke="url(#line-f)" stroke-width="1" />
+              </g>
+              <circle cx="180" cy="172" r="25" fill="url(#cta-hub-fill)" stroke="url(#cta-hub-ring)" stroke-width="1.25" />
+              <image href="assets/logo.png" x="160" y="152" width="40" height="40" clip-path="url(#cta-logo-clip)" preserveAspectRatio="xMidYMid meet" />
+              <g transform="translate(180 52)">
+                <circle r="20" fill="#FFFFFF" stroke="#DDEFFF" stroke-width="1.2" />
+                <g transform="translate(-7 -7) scale(0.583333)" stroke="#3B8EE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                  <path d="M10 9H8" />
+                  <path d="M16 13H8" />
+                  <path d="M16 17H8" />
+                </g>
+                <text x="0" y="36" text-anchor="middle" font-family="Manrope, sans-serif" font-size="7" font-weight="600" fill="#64748B">Notes</text>
+              </g>
+              <g transform="translate(262 112)">
+                <circle r="20" fill="#FFFFFF" stroke="#DDEFFF" stroke-width="1.2" />
+                <g transform="translate(-7 -7) scale(0.583333)" stroke="#3B8EE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                  <path d="M11 18H3" />
+                  <path d="M11 12H3" />
+                  <path d="M11 6H3" />
+                  <path d="m15 18 2 2 4-4" />
+                  <path d="m15 12 2 2 4-4" />
+                  <path d="m15 6 2 2 4-4" />
+                </g>
+                <text x="0" y="36" text-anchor="middle" font-family="Manrope, sans-serif" font-size="7" font-weight="600" fill="#64748B">Checklists</text>
+              </g>
+              <g transform="translate(262 244)">
+                <circle r="20" fill="#FFFFFF" stroke="#DDEFFF" stroke-width="1.2" />
+                <g transform="translate(-7 -7) scale(0.583333)" stroke="#3B8EE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="m9 12 2 2 4-4" />
+                </g>
+                <text x="0" y="36" text-anchor="middle" font-family="Manrope, sans-serif" font-size="7" font-weight="600" fill="#64748B">Tasks</text>
+              </g>
+              <g transform="translate(180 284)">
+                <circle r="20" fill="#FFFFFF" stroke="#DDEFFF" stroke-width="1.2" />
+                <g transform="translate(-7 -7) scale(0.583333)" stroke="#3B8EE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                  <rect x="3" y="4" width="18" height="18" rx="2" />
+                  <path d="M16 2v4" />
+                  <path d="M8 2v4" />
+                  <path d="M3 10h18" />
+                  <circle cx="8" cy="15" r="1" fill="#3B8EE8" stroke="none" />
+                  <circle cx="12" cy="15" r="1" fill="#3B8EE8" stroke="none" />
+                  <circle cx="16" cy="15" r="1" fill="#3B8EE8" stroke="none" />
+                </g>
+                <text x="0" y="36" text-anchor="middle" font-family="Manrope, sans-serif" font-size="7" font-weight="600" fill="#64748B">Habits</text>
+              </g>
+              <g transform="translate(98 244)">
+                <circle r="20" fill="#FFFFFF" stroke="#DDEFFF" stroke-width="1.2" />
+                <g transform="translate(-7 -7) scale(0.583333)" stroke="#3B8EE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                  <circle cx="9" cy="9" r="1" fill="#3B8EE8" stroke="none" />
+                  <circle cx="15" cy="9" r="1" fill="#3B8EE8" stroke="none" />
+                </g>
+                <text x="0" y="36" text-anchor="middle" font-family="Manrope, sans-serif" font-size="7" font-weight="600" fill="#64748B">Mood</text>
+              </g>
+              <g transform="translate(98 112)">
+                <circle r="20" fill="#FFFFFF" stroke="#DDEFFF" stroke-width="1.2" />
+                <g transform="translate(-7 -7) scale(0.583333)" stroke="#3B8EE8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <circle cx="9" cy="9" r="2" />
+                  <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                </g>
+                <text x="0" y="36" text-anchor="middle" font-family="Manrope, sans-serif" font-size="7" font-weight="600" fill="#64748B">Vision Board</text>
+              </g>
+            </svg>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a href="#top" class="footer-logo">
+              <img src="assets/logo.png" alt="" class="footer-logo-mark" width="28" height="28" />
+              <span>Cres</span>
+            </a>
+            <p class="footer-tagline">Notes, checklists, tasks, habits, mood tracking and vision boards — together in one calm app.</p>
+          </div>
+
+          <div class="footer-columns">
+            <div class="footer-col">
+              <p class="footer-col-title">Explore</p>
+              <nav class="footer-links" aria-label="Page sections">
+                <a href="#features">How it works</a>
+                <a href="#beyond">Why Cres</a>
+                <a href="#audience">For you</a>
+                <a href="#value">Outcomes</a>
+              </nav>
+            </div>
+
+            <div class="footer-col">
+              <p class="footer-col-title">Legal</p>
+              <nav class="footer-links" aria-label="Legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="delete-account.html">Delete Account</a>
+                <a href="support.html">Support</a>
+              </nav>
+            </div>
+
+            <div class="footer-col">
+              <p class="footer-col-title">Download</p>
+              <nav class="footer-links footer-stores" aria-label="Download Cres">
+                <a href="#" data-store="appstore" class="footer-store-link">
+                  <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                  App Store
+                </a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">&copy; 2026 Cres</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

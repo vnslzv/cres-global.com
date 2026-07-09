@@ -266,32 +266,138 @@ window.addEventListener(
 
 function initStoryCarousel() {
   const carousel = document.querySelector('.story-carousel');
-  if (!carousel) return;
+  const dotsContainer = document.querySelector('.story-carousel-dots');
+  if (!carousel || !dotsContainer) return;
 
-  const slides = [...carousel.querySelectorAll('.story-slide')];
+  const originalSlides = [...carousel.querySelectorAll('.story-slide')];
+  const slideCount = originalSlides.length;
+  if (slideCount === 0) return;
+
+  if (slideCount > 1) {
+    const firstClone = originalSlides[0].cloneNode(true);
+    const lastClone = originalSlides[slideCount - 1].cloneNode(true);
+    firstClone.classList.add('story-slide--clone');
+    lastClone.classList.add('story-slide--clone');
+    firstClone.setAttribute('aria-hidden', 'true');
+    lastClone.setAttribute('aria-hidden', 'true');
+    carousel.insertBefore(lastClone, originalSlides[0]);
+    carousel.appendChild(firstClone);
+  }
+
+  const getSlides = () => [...carousel.querySelectorAll('.story-slide')];
+
+  dotsContainer.innerHTML = '';
+  const dots = originalSlides.map((slide, index) => {
+    const label = slide.querySelector('.story-slide-label')?.textContent?.trim() || `Slide ${index + 1}`;
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'story-carousel-dot';
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('aria-label', label);
+    dot.setAttribute('aria-selected', 'false');
+    dot.dataset.index = String(index);
+    dotsContainer.appendChild(dot);
+    return dot;
+  });
+
   let isDragging = false;
+  let isJumping = false;
   let startX = 0;
   let scrollLeft = 0;
   let scrollRaf = 0;
   let scrollEndTimer = 0;
 
-  const updateActiveSlide = () => {
+  const getPhysicalIndex = (logicalIndex) => logicalIndex + 1;
+
+  const getLogicalIndex = (physicalIndex, totalSlides) => {
+    if (slideCount === 1) return 0;
+    if (physicalIndex === 0) return slideCount - 1;
+    if (physicalIndex === totalSlides - 1) return 0;
+    return physicalIndex - 1;
+  };
+
+  const getClosestPhysicalIndex = () => {
+    const slides = getSlides();
     const center = carousel.scrollLeft + carousel.clientWidth * 0.5;
-    let activeSlide = slides[0];
+    let activePhysical = 0;
     let minDistance = Infinity;
 
-    slides.forEach((slide) => {
+    slides.forEach((slide, index) => {
       const slideCenter = slide.offsetLeft + slide.offsetWidth * 0.5;
       const distance = Math.abs(center - slideCenter);
       if (distance < minDistance) {
         minDistance = distance;
-        activeSlide = slide;
+        activePhysical = index;
       }
     });
 
-    slides.forEach((slide) => {
-      slide.classList.toggle('is-active', slide === activeSlide);
+    return activePhysical;
+  };
+
+  const scrollToPhysical = (physicalIndex, smooth = true) => {
+    const slides = getSlides();
+    const slide = slides[physicalIndex];
+    if (!slide) return;
+
+    isJumping = !smooth;
+    if (!smooth) {
+      carousel.classList.add('is-jumping');
+    }
+
+    slide.scrollIntoView({
+      behavior: smooth ? 'smooth' : 'auto',
+      inline: 'center',
+      block: 'nearest',
     });
+
+    if (!smooth) {
+      window.requestAnimationFrame(() => {
+        carousel.classList.remove('is-jumping');
+        isJumping = false;
+      });
+    } else {
+      window.setTimeout(() => {
+        isJumping = false;
+      }, 420);
+    }
+  };
+
+  const updateActiveSlide = () => {
+    const slides = getSlides();
+    const activePhysical = getClosestPhysicalIndex();
+    const logicalIndex = getLogicalIndex(activePhysical, slides.length);
+
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('is-active', index === activePhysical);
+    });
+
+    dots.forEach((dot, index) => {
+      const isActive = index === logicalIndex;
+      dot.classList.toggle('is-active', isActive);
+      dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+  };
+
+  const handleInfiniteLoop = () => {
+    if (slideCount === 1 || isDragging || isJumping) return;
+
+    const slides = getSlides();
+    const activePhysical = getClosestPhysicalIndex();
+    const totalSlides = slides.length;
+
+    if (activePhysical === 0) {
+      scrollToPhysical(slideCount, false);
+      return;
+    }
+
+    if (activePhysical === totalSlides - 1) {
+      scrollToPhysical(1, false);
+    }
+  };
+
+  const onScrollSettled = () => {
+    handleInfiniteLoop();
+    updateActiveSlide();
   };
 
   const scheduleActiveUpdate = () => {
@@ -320,8 +426,19 @@ function initStoryCarousel() {
     if (!isDragging) return;
     isDragging = false;
     carousel.classList.remove('is-dragging');
-    updateActiveSlide();
+    onScrollSettled();
   };
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      const logicalIndex = Number(dot.dataset.index);
+      if (slideCount === 1) {
+        scrollToPhysical(0, true);
+        return;
+      }
+      scrollToPhysical(getPhysicalIndex(logicalIndex), true);
+    });
+  });
 
   carousel.addEventListener('mousedown', (event) => {
     if (event.button !== 0) return;
@@ -337,16 +454,27 @@ function initStoryCarousel() {
   carousel.addEventListener('mouseup', endDrag);
   carousel.addEventListener('mouseleave', endDrag);
 
-  carousel.addEventListener('scroll', () => {
+  carousel.addEventListener(
+    'scroll',
+    () => {
+      scheduleActiveUpdate();
+      window.clearTimeout(scrollEndTimer);
+      scrollEndTimer = window.setTimeout(onScrollSettled, 140);
+    },
+    { passive: true },
+  );
+
+  carousel.addEventListener('scrollend', onScrollSettled);
+
+  window.addEventListener('resize', () => {
     scheduleActiveUpdate();
-    window.clearTimeout(scrollEndTimer);
-    scrollEndTimer = window.setTimeout(updateActiveSlide, 140);
+    onScrollSettled();
   }, { passive: true });
 
-  carousel.addEventListener('scrollend', updateActiveSlide);
-
-  window.addEventListener('resize', scheduleActiveUpdate, { passive: true });
-  updateActiveSlide();
+  window.requestAnimationFrame(() => {
+    scrollToPhysical(slideCount === 1 ? 0 : 1, false);
+    onScrollSettled();
+  });
 }
 
 initConversionLinks();

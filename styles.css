@@ -1181,6 +1181,46 @@ h1 span {
   );
 }
 
+.story-carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding: 0.25rem 1.5rem 0;
+  margin-top: 0.35rem;
+}
+
+.story-carousel-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border: none;
+  padding: 0;
+  border-radius: 999px;
+  background: rgba(91, 167, 247, 0.22);
+  cursor: pointer;
+  transition:
+    background-color 220ms ease,
+    transform 220ms ease,
+    width 220ms ease;
+}
+
+.story-carousel-dot.is-active {
+  width: 1.35rem;
+  background: var(--brand);
+  transform: none;
+}
+
+.story-carousel-dot:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+
+.story-carousel.is-jumping {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
 .features-phone {
   width: min(100%, 13.5rem);
   margin-inline: auto;

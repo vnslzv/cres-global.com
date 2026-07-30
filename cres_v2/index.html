@@ -8,6 +8,31 @@
       content="Cres brings notes, checklists, tasks, habits, mood tracking and vision boards together in one calm workspace designed for personal growth."
     />
     <meta name="theme-color" content="#5BA7F7" />
+    <script>
+      // Do this before the page is painted: browsers otherwise restore the
+      // previous scroll position before the deferred application script runs.
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+      const scrollToPageTop = () => {
+        const root = document.documentElement;
+        const previousScrollBehavior = root.style.scrollBehavior;
+
+        root.style.scrollBehavior = 'auto';
+        window.scrollTo(0, 0);
+        root.scrollTop = 0;
+        document.body?.scrollTo(0, 0);
+        root.style.scrollBehavior = previousScrollBehavior;
+      };
+
+      scrollToPageTop();
+      // Browser scroll restoration may run after the initial inline script,
+      // especially when returning to the page from the back-forward cache.
+      window.addEventListener('pageshow', () => {
+        scrollToPageTop();
+        requestAnimationFrame(scrollToPageTop);
+      });
+    </script>
     <link rel="canonical" href="https://cres-global.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Cres" />
@@ -53,7 +78,7 @@
         <a href="#value">Outcomes</a>
       </nav>
       <div class="store-links" aria-label="Download links">
-        <a href="https://apps.apple.com/us/app/cres-life-organizer/id6792547993" data-store="appstore" class="button button-ghost store-button">
+        <a href="https://apps.apple.com/app/id6792547993" data-store="appstore" class="button button-ghost store-button" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-apple" aria-hidden="true"></i>
           App Store
         </a>
@@ -79,7 +104,7 @@
       <a href="#value">Outcomes</a>
       <a href="#cta">Download</a>
       <div class="mobile-nav-stores">
-        <a href="https://apps.apple.com/us/app/cres-life-organizer/id6792547993" data-store="appstore" class="mobile-store-link">
+        <a href="https://apps.apple.com/app/id6792547993" data-store="appstore" class="mobile-store-link" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-apple" aria-hidden="true"></i>
           App Store
         </a>
@@ -99,7 +124,7 @@
             together in one calm workspace. One app instead of six.
           </p>
           <div class="hero-actions">
-            <a href="https://apps.apple.com/us/app/cres-life-organizer/id6792547993" data-store="appstore" class="button">
+            <a href="https://apps.apple.com/app/id6792547993" data-store="appstore" class="button" target="_blank" rel="noopener noreferrer">
               <i class="fa-brands fa-apple" aria-hidden="true"></i>
               App Store
             </a>
@@ -692,7 +717,7 @@
               Notes, checklists, tasks, habits, mood tracking and vision boards — together in one app designed for personal growth.
             </p>
             <div class="cta-actions">
-              <a href="https://apps.apple.com/us/app/cres-life-organizer/id6792547993" data-store="appstore" class="button">
+              <a href="https://apps.apple.com/app/id6792547993" data-store="appstore" class="button" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-apple" aria-hidden="true"></i>
                 App Store
               </a>
@@ -857,7 +882,7 @@
             <div class="footer-col">
               <p class="footer-col-title">Download</p>
               <nav class="footer-links footer-stores" aria-label="Download Cres">
-                <a href="https://apps.apple.com/us/app/cres-life-organizer/id6792547993" data-store="appstore" class="footer-store-link">
+                <a href="https://apps.apple.com/app/id6792547993" data-store="appstore" class="footer-store-link" target="_blank" rel="noopener noreferrer">
                   <i class="fa-brands fa-apple" aria-hidden="true"></i>
                   App Store
                 </a>
@@ -872,6 +897,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260709" defer></script>
+    <script src="script.js?v=20260730-2" defer></script>
   </body>
 </html>

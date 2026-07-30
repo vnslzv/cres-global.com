@@ -1,5 +1,7 @@
 const CRESCONFIG = {
-  appStoreUrl: 'https://apps.apple.com/us/app/cres-life-organizer/id6792547993',
+  // The store selects the appropriate regional storefront from this canonical
+  // app URL. A country-specific URL can leave visitors on an unavailable page.
+  appStoreUrl: 'https://apps.apple.com/app/id6792547993',
   comingSoon: false,
 };
 
@@ -8,11 +10,28 @@ function initPageAtTop() {
     history.scrollRestoration = 'manual';
   }
 
-  const scrollToTop = () => window.scrollTo(0, 0);
+  const scrollToTop = () => {
+    const root = document.documentElement;
+    const previousScrollBehavior = root.style.scrollBehavior;
+
+    // The stylesheet enables smooth scrolling for in-page navigation. Disable
+    // it briefly here so a restored position never animates into view.
+    root.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+    root.scrollTop = 0;
+    document.body?.scrollTo(0, 0);
+    root.style.scrollBehavior = previousScrollBehavior;
+  };
 
   scrollToTop();
-  window.addEventListener('load', scrollToTop, { once: true });
-  window.addEventListener('pageshow', scrollToTop);
+  window.addEventListener('load', () => {
+    scrollToTop();
+    window.requestAnimationFrame(scrollToTop);
+  }, { once: true });
+  window.addEventListener('pageshow', () => {
+    scrollToTop();
+    window.requestAnimationFrame(scrollToTop);
+  });
 }
 
 initPageAtTop();

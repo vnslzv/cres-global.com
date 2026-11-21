@@ -33,7 +33,7 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Golos+Text:wght@500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20261011" />
+    <link rel="stylesheet" href="styles.css?v=20261121" />
   </head>
   <body class="legal-body">
     <div class="bg-glow glow-a" aria-hidden="true"></div>
@@ -53,7 +53,7 @@
       <article class="legal-doc">
         <header class="legal-doc-head">
           <h1>Privacy Policy</h1>
-          <p class="legal-meta">Last updated: October 2026</p>
+          <p class="legal-meta">Last updated: November 2026</p>
         </header>
 
         <section>
@@ -61,7 +61,7 @@
           <p>Welcome to Cres.</p>
           <p>
             Cres is a personal growth application that brings together Notes, Checklists, Tasks,
-            Habits, Mood, and Vision Boards in one calm workspace.
+            Habits, Mood, Calendar, Focus, and Vision Boards in one calm workspace.
           </p>
           <p>
             This Privacy Policy explains what information we collect, how we use it, how we
@@ -111,25 +111,64 @@
             <li>Tasks</li>
             <li>Habits</li>
             <li>Mood entries</li>
+            <li>
+              Calendar events and calendar categories (including titles, descriptions, locations,
+              links, times, time zones, recurrence rules, colors, and reminder settings you configure)
+            </li>
+            <li>
+              Focus (Pomodoro-style) session records when a focus block is completed and meets the
+              app&rsquo;s minimum recordable duration (for example, planned and actual duration,
+              start and end times, completion status, and an optional linked task title snapshot)
+            </li>
             <li>Vision Boards</li>
             <li>Time Capsule sealed notes and checklists (including open dates and sealed content stored in your account)</li>
             <li>Folders and organization data</li>
             <li>Photos and attachments</li>
             <li>Personal reflections and goals</li>
             <li>Appearance and theme preferences</li>
+            <li>Notification preferences (for example, habit reminders, mood reminders, and goal progress updates)</li>
             <li>Trash and deleted content (for example, notes removed from Trash after a retention period shown in the app)</li>
           </ul>
           <p>
             Your content remains associated with your account and is used solely to provide the
             functionality of the service.
           </p>
+          <p>
+            <strong>Focus timer (ephemeral):</strong> The active Focus countdown, pause state, and Focus
+            duration preferences (such as focus and break lengths, auto-start, tick sound, and timer
+            style) are kept for your current use of the app and are <strong>not</strong> saved as
+            lasting account settings on our servers or as long-term preferences on your device. Closing
+            the app, ending a session, switching accounts, or starting a new Focus flow returns these
+            values to defaults. Completed Focus sessions that qualify for saving may still be stored with
+            your account as described above.
+          </p>
+          <p>
+            <strong>Tasks:</strong> Tasks may be stored primarily on your device to support daily
+            planning. Depending on your device and app version, Tasks may not sync across devices in the
+            same way as Notes or Calendar events.
+          </p>
 
           <h3>Information Stored Locally</h3>
           <p>
-            To support offline functionality, Cres may store certain information on your device.
+            To support offline functionality, performance, and features such as App Lock, Cres may
+            store certain information on your device (including caches of cloud content, Tasks,
+            security settings such as App Lock PIN flags, and theme preferences).
           </p>
           <p>
-            When connectivity becomes available, data may synchronize with our cloud services.
+            When connectivity becomes available, eligible account data may synchronize with our cloud
+            services.
+          </p>
+
+          <h3>Notifications</h3>
+          <p>With your permission, Cres may schedule <strong>local notifications</strong> on your device, for example:</p>
+          <ul>
+            <li>Calendar event reminders</li>
+            <li>Focus phase end alerts</li>
+            <li>Habit reminders, mood reminders, or goal progress updates, when you enable them</li>
+          </ul>
+          <p>
+            These notifications are delivered by your device&rsquo;s operating system. You can control
+            related preferences in Cres Settings and in your device system settings.
           </p>
         </section>
 
@@ -140,8 +179,8 @@
             <li>Create and manage your account</li>
             <li>Authenticate your identity</li>
             <li>Save and synchronize your data</li>
-            <li>Restore your information across devices</li>
-            <li>Provide application features</li>
+            <li>Restore your information across devices (where sync is available for that feature)</li>
+            <li>Provide application features, including Calendar and Focus</li>
             <li>Improve reliability, performance, and security</li>
             <li>Respond to support requests</li>
             <li>Comply with legal obligations</li>
@@ -149,8 +188,9 @@
           <p>We do not sell personal information.</p>
           <p>We do not rent personal information.</p>
           <p>
-            We do not use your Notes, Checklists, Tasks, Habits, Mood entries, Vision Boards, Time
-            Capsule content, or other personal content for advertising purposes.
+            We do not use your Notes, Checklists, Tasks, Habits, Mood entries, Calendar events, Focus
+            session records, Vision Boards, Time Capsule content, or other personal content for
+            advertising purposes.
           </p>
           <p>
             Cres does not integrate third-party advertising SDKs in the app. We do not sell personal
@@ -204,6 +244,7 @@
             <li>Access controls</li>
             <li>Cloud security protections</li>
             <li>Device-level security features</li>
+            <li>App integrity checks (for example, Firebase App Check) where enabled</li>
           </ul>
           <p>
             However, no method of transmission or storage can be guaranteed to be completely secure.
@@ -234,9 +275,11 @@
             <li>Hidden Notes</li>
             <li>Checklists</li>
             <li>Hidden Checklists</li>
-            <li>Tasks</li>
+            <li>Tasks stored for your account on the device</li>
             <li>Habits</li>
             <li>Mood entries</li>
+            <li>Calendar events and calendar categories</li>
+            <li>Focus session records associated with your account</li>
             <li>Vision Boards</li>
             <li>Time Capsule sealed content</li>
             <li>Photos and attachments</li>
@@ -261,6 +304,7 @@
             <li>Firebase Firestore</li>
             <li>Firebase Storage</li>
             <li>Firebase App Check</li>
+            <li>Firebase Cloud Functions (for example, account and security-related flows)</li>
             <li>Apple Sign In</li>
             <li>Google Sign In</li>
             <li>RevenueCat (subscription management)</li>
